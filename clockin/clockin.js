@@ -42,7 +42,7 @@ class Keka {
     });
     console.log("browser launched");
     const context = browser.defaultBrowserContext();
-    await context.overridePermissions("https://rhythmhealthcare.keka.com", [
+    await context.overridePermissions(`https://${process.env.COMPANY_NAME}.keka.com`, [
       "geolocation",
     ]);
     const page = await browser.newPage();
