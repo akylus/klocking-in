@@ -4,7 +4,7 @@ const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 puppeteer.use(StealthPlugin());
 class Keka {
   constructor() {
-    this.URL = "https://rhythmhealthcare.keka.com/#/me/attendance/logs";
+    this.URL = `https://${process.env.COMPANY_NAME}.keka.com/#/me/attendance/logs`;
   }
   getText(linkText) {
     linkText = linkText.replace(/\r\n|\r/g, "\n");
